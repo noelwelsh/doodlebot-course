@@ -44,7 +44,9 @@
 
     # `InputError`
 
-    The `InputError` type holds errors associated with a form field. It stores a `Map[String, NonEmptyList[String]]`.
+    ~~~scala
+    final case class InputError(messages: Map[String,NonEmptyList[String]])
+    ~~~
 
     - The `String` key is the name of the form element
     - The `NonEmptyList[String]` is the list of error messages associated with
@@ -63,6 +65,57 @@
 
     `FormErrors` is not particularly important, except that we have to return it
     from the endpoints on error.
+
+    ---
+
+    We often need to "add" or append things together. E.g. add numbers, add
+    lists, add together `InputErrors`. What would this mean, precisely, in each
+    case?
+
+    ???
+
+    Get the students to think about what addition could mean in each case, and
+    try to draw out some of the laws. E.g. the identity element.
+
+    ---
+
+    # Monoids
+
+    Cats has a type class for this, called `Monoid`.
+
+    ---
+
+    # Monoid Syntax
+
+    Cats also provides some syntax (an `implicit class`) for monoid addition: `|+|`.
+
+    ---
+
+    ~~~scala
+    // For |+| syntax
+    import cats.syntax.semigroup._
+    // For int type class instance
+    import cats.std.int._
+    // For option type class instance
+    import cats.std.option._
+    // For list type class instance
+    import cats.std.list._
+
+    1 |+| 2
+    // res: Int = 3
+    Option(1) |+| Option(2)
+    // res: Option[Int] = Some(3)
+    List(1,2,3) |+| List(4,5,6)
+    // res: List[Int] = List(1, 2, 3, 4, 5, 6)
+
+    ~~~
+
+    ---
+
+    Implement the `Monoid` instance for `InputError`
+
+    Hint: you can reuse the monoid instances for `Map` and `List`. (See the
+    commented out imports.)
 
   </textarea>
   <!--

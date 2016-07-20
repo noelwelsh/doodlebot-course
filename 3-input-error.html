@@ -45,12 +45,14 @@
     # `InputError`
 
     ~~~scala
-    final case class InputError(messages: Map[String,NonEmptyList[String]])
+    final case class InputError(
+      messages: Map[String,NonEmptyList[String]]
+    )
     ~~~
 
-    - The `String` key is the name of the form element
+    - The `String` key is the name of the input
     - The `NonEmptyList[String]` is the list of error messages associated with
-    that element. (A `NonEmptyList` is just a list that has at least one element.)
+    the input. (A `NonEmptyList` is a list with at least one element.)
 
     ???
 

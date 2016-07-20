@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="essential-scala">
+<head>
+  <title>Essential Scala</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+  <textarea id="source">
+    name: inverse
+    layout: true
+    class: center, middle
+
+    ---
+    class: hero
+
+    # Doodlebot Case Study
+
+    .brand[[![Underscore Logo](img/white-logo.png)](http://underscore.io/)]
+
+    ???
+
+    **Estimated time: 15 minutes**
+
+    Notes help:
+
+    - "You" generally means the trainer.
+    - Trainees are referred to as "the trainees".
+    - Direct questions/comments for the trainees are written in italics.
+      For example, *What are your goals for the course?*
+      means your should ask the trainees what their goals are.
+    - An ellipsis at the end of the notes indicates
+      you can use the transition to the next slide for effect.
+
+    Keyboard help:
+
+    - Pressing P toggled speaker view.
+    - Pressing C clones the slideshow view (to put on the projector if you're using speaker view).
+    - Pressing ? toggles keyboard commands help.
+
+    ---
+    class: title
+
+    # Introduction
+
+    ???
+
+    ---
+
+    # Doodlebot
+
+    - A simple chat application.
+    - See the Essential Scala patterns in a larger context
+    - See an example closer to most people's day job
+
+    ???
+
+    The goal here is to show how the Essential Scala patterns transfer out of the classroom.
+    We'll use a fairly small web application, with a front- and back-end both written in Scala.
+    We first see the working web application, then fix a broken version of the back-end.
+
+    ---
+
+    # Getting Started
+
+    - Fork `https://github.com/underscoreio/doodlebot`
+    - Run it as described in the `README`
+
+    ???
+
+    ---
+
+    # Explore
+
+    - Try the signup and login actions
+    - Make sure you explore the error behavior
+
+    ???
+
+    We'll be reimplementing signup and login, so make sure you understand how
+    they work, and in particular the error behavior:
+
+    - requirements for user names and passwords
+    - duplicate signups
+    - login when the user doesn't exist
+    - login when the password is incorrect
+
+    ---
+
+    # Break Everything!
+
+    Switch to the `broken` branch.
+
+    ???
+
+  </textarea>
+  <!--
+    There's a copy of this JS included in the cached folder,
+    to give yourself a chance if you have no internets /o\
+  -->
+  <script src="js/remark-latest.min.js">
+  </script>
+  <script>
+    var slideshow = remark.create({
+      ratio: '4:3',
+      //ratio: '16:9',
+
+      slideNumberFormat: '',
+      // Or you might like the page number bottom right:
+      // slideNumberFormat: '%current%',
+
+      // Default: use ```sql ..``` etc to override
+      highlightLanguage: 'scala',
+
+      // Plausible style for blue background:
+      highlightStyle: 'github',
+
+      // These also look reasonable:
+      //highlightStyle: 'default',
+      //highlightStyle: 'ascetic',
+      //highlightStyle: 'vs',
+
+      //Good styles, but don't really work with a blue background:
+      //highlightStyle: 'ir_black',
+      //highlightStyle: 'dark',
+
+      });
+  </script>
+</body>
+</html>

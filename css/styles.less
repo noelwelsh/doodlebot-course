@@ -1,0 +1,193 @@
+@brand-color: #e8515b;
+
+@info-light-color: lighten(#ceecf4, 5%);
+@warning-light-color: lighten(#fae7cb, 5%);
+@danger-light-color: lighten(#f5d4d3, 5%);
+
+@info-dark-color: lighten(#5ebfdc, 10%);
+@warning-dark-color: lighten(#efae57, 10%);
+@danger-dark-color: lighten(#e79997, 10%);
+
+
+body {
+  font-family: Lato;
+}
+
+.remark-slide-content {
+  font-size: 220%;
+
+  &.hero {
+    background-color: @brand-color;
+    background-image: url(hero-left-overlay-color.svg), url(hero-right-overlay-color.svg);
+    color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &.title {
+    background: @brand-color;
+    color: #fff;
+  }
+
+  .aside-title-slide(@bg-color) {
+    background: @bg-color;
+    border: none !important;
+    color: #fff;
+  }
+
+  .aside-content-slide(@bg-color, @border-color) {
+    // background: @bg-color;
+    border-left: .75em solid @border-color;
+    .remark-code {
+      background: @bg-color !important;
+    }
+  }
+
+  &.info    { .aside-content-slide(@info-light-color, @info-dark-color);       }
+  &.warning { .aside-content-slide(@warning-light-color, @warning-dark-color); }
+  &.danger  { .aside-content-slide(@danger-light-color, @danger-dark-color);   }
+
+  &.title.info    { .aside-title-slide(@info-dark-color);    }
+  &.title.warning { .aside-title-slide(@warning-dark-color); }
+  &.title.danger  { .aside-title-slide(@danger-dark-color);  }
+
+  h1, h2, h3 {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  p, li {
+    text-align: center;
+    line-height: 2em;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  p + p,
+  ul + p,
+  ol + p {
+    margin-top: 1em;
+  }
+
+  li {
+    font-size: 85%;
+  }
+
+  blockquote {
+    font-size: 200%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
+    font-weight: lighter;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2pt solid silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  td, th {
+    padding: .5em;
+    border: 1pt solid silver;
+    font-weight: normal;
+    font-size: 70%;
+  }
+
+  th {
+    background-color: #3E505D;
+    color: white;
+  }
+
+  .brand {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5em;
+    margin-left: -129px; // half the width of the logo PNG
+  }
+
+  .muted {
+    color: #666;
+  }
+
+  .width50 {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+
+  .exercise {
+    display: block;
+    text-align: center;
+    font-size: .8em;
+    color: @brand-color;
+
+    &:before {
+      display: inline-block;
+      position: relative;
+      padding-right: .2ex;
+      top: .25em;
+      content: '☞';
+      font-size: 2.5em;
+      color: @brand-color;
+    }
+  }
+}
+
+@font-face {
+  font-family: FiraMono;
+  font-weight: normal;
+  src: url(FiraMonoFonts3206/WEB/TTF/FiraMono-Regular.ttf);
+}
+
+.remark-code,
+.remark-inline-code {
+  text-align: left;
+  font-family: FiraMono, monospace;
+}
+
+.remark-inline-code {
+  font-size: 85%;
+}
+
+.remark-code {
+  font-size: 65%;
+}
+
+.remark-slide,
+.remark-notes {
+  .todo {
+    background-color: #ff7;
+  }
+}

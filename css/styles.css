@@ -1,0 +1,168 @@
+body {
+  font-family: Lato;
+}
+.remark-slide-content {
+  font-size: 220%;
+}
+.remark-slide-content.hero {
+  background-color: #e8515b;
+  background-image: url(hero-left-overlay-color.svg), url(hero-right-overlay-color.svg);
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.remark-slide-content.hero a {
+  color: #fff;
+}
+.remark-slide-content.title {
+  background: #e8515b;
+  color: #fff;
+}
+.remark-slide-content.info {
+  border-left: 0.75em solid #88d0e5;
+}
+.remark-slide-content.info .remark-code {
+  background: #e3f4f9 !important;
+}
+.remark-slide-content.warning {
+  border-left: 0.75em solid #f3c486;
+}
+.remark-slide-content.warning .remark-code {
+  background: #fcf2e2 !important;
+}
+.remark-slide-content.danger {
+  border-left: 0.75em solid #f1c2c0;
+}
+.remark-slide-content.danger .remark-code {
+  background: #fae8e8 !important;
+}
+.remark-slide-content.title.info {
+  background: #88d0e5;
+  border: none !important;
+  color: #fff;
+}
+.remark-slide-content.title.warning {
+  background: #f3c486;
+  border: none !important;
+  color: #fff;
+}
+.remark-slide-content.title.danger {
+  background: #f1c2c0;
+  border: none !important;
+  color: #fff;
+}
+.remark-slide-content h1,
+.remark-slide-content h2,
+.remark-slide-content h3 {
+  font-weight: normal;
+  text-align: center;
+}
+.remark-slide-content a {
+  text-decoration: none;
+}
+.remark-slide-content ul,
+.remark-slide-content ol {
+  margin: 0;
+  padding: 0;
+}
+.remark-slide-content ul {
+  list-style-type: none;
+}
+.remark-slide-content ol {
+  list-style-position: inside;
+}
+.remark-slide-content p,
+.remark-slide-content li {
+  text-align: center;
+  line-height: 2em;
+}
+.remark-slide-content p {
+  margin-top: 0;
+}
+.remark-slide-content p + p,
+.remark-slide-content ul + p,
+.remark-slide-content ol + p {
+  margin-top: 1em;
+}
+.remark-slide-content li {
+  font-size: 85%;
+}
+.remark-slide-content blockquote {
+  font-size: 200%;
+}
+.remark-slide-content img {
+  max-width: 100%;
+}
+.remark-slide-content table {
+  font-weight: lighter;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2pt solid silver;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+.remark-slide-content td,
+.remark-slide-content th {
+  padding: .5em;
+  border: 1pt solid silver;
+  font-weight: normal;
+  font-size: 70%;
+}
+.remark-slide-content th {
+  background-color: #3E505D;
+  color: white;
+}
+.remark-slide-content .brand {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5em;
+  margin-left: -129px;
+}
+.remark-slide-content .muted {
+  color: #666;
+}
+.remark-slide-content .width50 {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.remark-slide-content .exercise {
+  display: block;
+  text-align: center;
+  font-size: .8em;
+  color: #e8515b;
+}
+.remark-slide-content .exercise:before {
+  display: inline-block;
+  position: relative;
+  padding-right: .2ex;
+  top: .25em;
+  content: '☞';
+  font-size: 2.5em;
+  color: #e8515b;
+}
+@font-face {
+  font-family: FiraMono;
+  font-weight: normal;
+  src: url(FiraMonoFonts3206/WEB/TTF/FiraMono-Regular.ttf);
+}
+.remark-code,
+.remark-inline-code {
+  text-align: left;
+  font-family: FiraMono, monospace;
+}
+.remark-inline-code {
+  font-size: 85%;
+}
+.remark-code {
+  font-size: 65%;
+}
+.remark-slide .todo,
+.remark-notes .todo {
+  background-color: #ff7;
+}
